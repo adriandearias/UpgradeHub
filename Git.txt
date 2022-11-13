@@ -11,6 +11,7 @@ git add <file>				Adds file to working directory to staging area
 git rm --cached <file>		Removes the file to unstage
 git restore <file>			Restore changes from modified staging version
 git diff 					show differences before commit
+git diff --staged 					show differences before commit but in stagging state.
 Git –s 						You can take a look of added files to commit. 
 git config --global user.email "your@email.com"
 git config --global user.name "your_user"
