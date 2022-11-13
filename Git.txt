@@ -10,8 +10,8 @@ git add . 					Uploads all files/changes to staging area
 git add <file>				Adds file to working directory to staging area
 git rm --cached <file>		Removes the file to unstage
 git restore <file>			Restore changes from modified staging version
-
-Git –s -> You can take a look of added files to commit. 
+git diff 					show differences before commit
+Git –s 						You can take a look of added files to commit. 
 git config --global user.email "your@email.com"
 git config --global user.name "your_user"
 
