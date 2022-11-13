@@ -12,7 +12,8 @@ git rm --cached <file>		Removes the file to unstage
 git restore <file>			Restore changes from modified staging version
 git diff 					show differences before commit
 git diff --staged 					show differences before commit but in stagging state.
-Git –s 						You can take a look of added files to commit. 
+git –s 						You can take a look of added files to commit. 
+git log						Show git log
 git config --global user.email "your@email.com"
 git config --global user.name "your_user"
 
