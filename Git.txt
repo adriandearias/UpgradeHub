@@ -1,0 +1,73 @@
+---------------------------------------------------------------------------
+								   Git
+---------------------------------------------------------------------------
+pwd 						Shows full directory
+
+git status					Project files status 
+git init					Initializes to create new project
+
+git add . 					Uploads all files/changes to staging area
+git add <file>				Adds file to working directory to staging area
+git rm --cached <file>		Removes the file to unstage
+git restore <file>			Restore changes from modified staging version
+
+Git –s -> You can take a look of added files to commit. 
+git config --global user.email "your@email.com"
+git config --global user.name "your_user"
+
+git commit					Edit the file with default Git editor (VIM)
+	i 	 ->		insert text					
+	w 	 -> 	write, save changes
+	q    ->		q quit
+	:wq   ->		write and quit
+git commit -m "Version 0.0.2"	Change file version txt
+
+git log						Shows date, author and first line (version)
+
+git checkout -- index.html	Skips version/changes of modified file
+git checkout branchname		Changes to desired branch to work in
+git diff index.html			Console check of all changes + -
+
+*** Ignore with .gitignore	You can skip files or directories if you
+							add the name of the file you want ignore in this file and it will not appear when you use commit.
+
+---------------------------------------------------------------------------
+								CREATE BRANCHS
+---------------------------------------------------------------------------
+git branch 					You can take a look the branches you have
+git branch nameofnewbranch	Creates a new branch
+git checkout branchname		Changes to desired branch to work in
+git branch login			
+git checkout login			
+
+---------------------------------------------------------------------------
+							Sync Git with GitHub
+---------------------------------------------------------------------------
+We need to create new repository at GitHub.
+We receive link with our username/project.git with the following commands to start the sync.
+
+git remote add origin https://github.com/adriandearias/gitproject.git
+git push -u origin master
+
+Finally we do the push of "master" branch or whathever we want.
+
+---------------------------------------------------------------------------
+							Creating README
+---------------------------------------------------------------------------
+This file can be usefull for people who watch our code or peoaple who needs to work with it. 
+
+We directly can make this file in GitHub, the website give us an option to do it.
+
+## 		-> 		with double # we make Titles
+````	->		3 of ` we put marked/indented text.	
+
+---------------------------------------------------------------------------
+							Downloading Our project
+---------------------------------------------------------------------------
+We can download our entire project or do a checkout with repository link in GitHub repository. this way if we'll lost our local files we had a our files in a safe place to backup them.
+
+In our directory we just need to do the following command; 
+
+	git clone https://github.com/adriandearias/gitproject.git
+
+
