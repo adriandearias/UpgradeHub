@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="/next-page" method="post">
+            <fieldset>
+                <legend>Información usuario</legend>
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" minlength="3" maxlength="50" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" minlength="5" maxlength="50" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contacte con nosotros</legend>
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" required>
+                        <option value="duda">Duda</option>
+                        <option value="reclamacion">Reclamacion</option>
+                        <option value="queja">Queja</option>
+                        <option value="peticion">Petición</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="email">Dirección de correo electrónico:</label>
+                    <input type="email" id="email" minlength="5" maxlength="50" required>
+                </div>
+                <div>
+                    <label for="ref">Referencia del pedido:</label>
+                    <select name="ref">
+                        <option value="refa">Referencia 1</option>
+                        <option value="refb">Referencia 2</option>
+                        <option value="refc">Referencia 3</option>
+                        <option value="refd">Referencia 4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fichero">Archivo adjunto:</label>
+                    <input type="file" id="fichero">
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" required></textarea>
+                </div>
+            </fieldset>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
