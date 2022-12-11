@@ -11,6 +11,7 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="logo Mozza Bar">
             </div>
+            <!-- DUDA == ¿ES CORRECTO DIV PARA LOGO DENTRO DE HEADER Y UNA LISTA PARA EL MENU NAV? -->
             <nav class="nav-links">
                 <ul>
                     <li>Home</li>
@@ -24,23 +25,249 @@
             </nav>
             <main>
                 <section class="home-container">
-                    <div class="home">
-                        <h2>Descubre</h2>
+                    <div class="home-content">
+                        <p>Descubre</p>
                         <h1>MOZZA BAR</h1>
                         <img src="" alt="">
-                        <h4>WE ARE OPEN</h4>
+                        <p>WE ARE OPEN</p>
                     </div>
                 </section>
                 <section class="concepto-container">
-                    <div class="concepto">
-                        <h5>CONCEPTO</h5>
+                    <div class="concepto-content">
+                        <h3>CONCEPTO</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ea dicta odio porro necessitatibus repellat, exercitationem, inventore tempore tempora sit repellendus excepturi eligendi mollitia earum nihil possimus cupiditate, minus eaque?</p>
                     </div>
                 </section>
                 <section class="fotos-container">
-                    <div class=""></div>
+                    <div class="foto-a"><img src="#" alt="imagen a"></div>
+                    <div class="foto-b"><img src="#" alt="imagen b"></div>
+                    <div class="foto-c"><img src="#" alt="imagen c"></div>
+                    <div class="foto-d"><img src="#" alt="imagen d"></div>
+                    <div class="foto-e"><img src="#" alt="imagen e"></div>
+                    <div class="foto-f"><img src="#" alt="imagen f"></div>
+                </section>
+                <section class="menu-container">
+                    <div class="menu-header"></div>
+                        <h2>CARTA</h2>
+                        <div class="menu-nav">
+                            <ul>
+                                <li><a href="#">DESAYUNOS</a></li>
+                                <li><a href="#">CARTA</a></li>
+                                <li><a href="#">COCKTAILS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- DUDA == ¿SE PONE CLASS AUNQUE A PRIORI NO VAYAMOS A DARLE FORMATO? AUNQUE SOLO SEA
+                    PARA IDENTIFICAR EL HTML? -->
+                    <div class="menu-content">
+                        <div class="desayunos-menu-content">
+                            <div class="desayunos-menu-left">
+                                <div class="desayunos-menu-dulces">
+                                    <!-- DUDA == ¿SE PODRIA HACER CON TABLAS EL MENU? O NO SE RECOMIENDA? -->
+                                    <table>
+                                        <thead class="menu-thead">
+                                            <tr>
+                                                <td>DULCES</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CROISSANT</td>
+                                                <td>1.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CROISSANT</td>
+                                                <td>1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>NAPOLITANA DE CHOCOLATE</td>
+                                                <td>1.40</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="desayunos-menu-desayunos">
+                                    <h5>DESAYUNOS 7:30 A 11:30</h5>
+                                </div>
+                                <div class="desayunos-menu-zumos">
+                                    <h5>ZUMOS</h5>
+                                </div>
+                                <div class="desayunos-menu-milkshakes">
+                                    <h5>MILKSHAKES</h5>
+                                </div>
+                            </div>
+                            <div class="desayunos-menu-right">
+                                <div class="desayunos-menu-salados">
+                                    <h5>SALADOS</h5>
+                                </div>
+                                <div class="desayunos-menu-baguette">
+                                    <h5>BAGUETTE</h5>
+                                </div>
+                                <div class="desayunos-menu-frapuccinos">
+                                    <h5>FRAPUCCINOS</h5>
+                                </div>
+                                <div class="desayunos-menu-smoothie">
+                                    <h5>SMOTHIES CON BASE DE ZUMO O YOGURT</h5>
+                                </div>
+                                <div class="desayunos-menu-tes">
+                                    <h5>TES E INFUSIONES</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carta-content">
+                            <!-- A RELLENAR -->
+                        </div>
+                        <div class="cocktails-content">
+                            <!-- A RELLENAR -->
+                        </div>
+                    </div>
+                    <div class="desayunos-link">
+                        <a href="#">
+                            <button class="desayunos-button">VER LA CARTA DE DESAYUNOS</button>
+                        </a>
+                    </div>
+                </section>
+                <section class="reservas-container">
+                    <div class="reservas-header">
+                        <h2>RESERVAS</h2>
+                    </div>
+                    <div class="reservas-content">
+                        <div class="reservas-form-left">
+                            <form action="">
+                                <!-- select numero de personas -->
+                                <label for="reservas-num-personas">Personas</label>
+                                <select id="reservas-num-personas" name="personas">
+                                    <option value="dos-personas">2 Personas</option>
+                                    <option value="tres-personas">3 Personas</option>
+                                    <option value="cuatro-personas">4 Personas</option>
+                                    <option value="cinco-personas">5 Personas</option>
+                                    <option value="seis-personas">6 Personas</option>
+                                </select>
+                                <!-- input seleccionar hora reserva -->
+
+                                <!-- <label for="reservas-hora">Hora</label>
+                                <select id="reservas-hora" name="country">
+                                    <option value="hora">13:30h</option>
+                                </select> -->
+
+                                <!-- Pruebo el input type "time" aunque el rango de horas se controla con javascript -->
+                                <label for="reservas-hora">Hora</label>
+                                <input id="reservas-hora" type="time" name="reservas-hora" value="reservas-hora" />
+                                <!-- select tipo de mesa -->
+                                <label for="reservas-tipo-mesa">Tipo de mesa</label>
+                                <select name="reservas-tipo-mesa" id="reservas-tipo-mesa">
+                                    <option value="mesa-redonda">Mesa Redonda</option>
+                                    <option value="mesa-sillones">Mesa con sillones cómodos</option>
+                                    <option value="mesa-ventana">Mesa con vistas al mar</option>
+                                    <option value="indiferente">Indiferente</option>
+                                </select>
+                                <!-- Boton submit/reservar form -->
+                                <input type="submit" value="Reservar">
+                            </form>
+                            <p>Si no encuentra disponibilidad, apúntese en la lista de espera.</p>
+                            <a href="#">
+                                <button class="reservas-listaespera-button">Lista de espera</button>
+                            </a>
+                            <a href="#">
+                                <button class="reservas-solicitud-grupo">Solicitud de grupo</button>
+                            </a>
+                        </div>
+                        <div class="reservas-content-right">
+                            <!-- DUDA == ¿ES CORRECTO SPAN DENTRO DE H? ? -->
+                            <h3><span>MOZZABAR </span>FOOD & DRINKS</h3>
+                            <p>Conde de Peñalver 64 28006 - Madrid Abrimos de Lunes a domingo</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog-container">
+                    <div class="blog-header">
+                        <h2>BLOG</h2>
+                    </div>
+                    <!-- DUDA == ¿AQUI ESTAN BIEN LOS ARTCILES O PODRIAN SER DIVS SIN MAS? -->
+                    <div class="blog-content">
+                        <article class="first-blog-post">
+                            <p>03/06/2014</p>
+                            <h4>MOZZA ABRE NUEVA TERRAZA DE VERANO EN BOMBAY LOUNGE</h4>
+                        </article>
+                        <article class="second-blog-post">
+                            <p>17/03/2014</p>
+                            <h4>PROMOCIÓN ESPECIAL: TARTA & COCKTAIL 6.90€</h4>
+                        </article>
+                        <article class="third-blog-post">
+                            <p>02/03/2014</p>
+                            <h4>MOZZA BAR: BRUNCH 2 DE MARZO</h4>
+                        </article>
+                    </div>
+                    <div class="blog-button">
+                        <a href="#">
+                            <button class="blog-button">VER TODAS LAS ENTRADAS</button>
+                        </a>
+                    </div>
+                </section>
+                <section class="contacto-container">
+                    <div class="contacto-header">
+                        <img src="./img/logo.png" alt="logo mozzabar">
+                        <h3>VEN CUANDO QUIERAS</h3>
+                    </div>
+                    <div class="contacto-content">
+                        <div class="contacto-content-direccion">
+                            <img src="#" alt="imagen de un mapa">
+                            <p>c/ Conde de Peñalver 64 28006 - Madrid</p>
+                        </div>
+                        <div class="contacto-content-telef">
+                            <img src="#" alt="imagen de un movil">
+                            <p>910 258 327</p>
+                        </div>
+                        <div class="contacto-content-email">
+                            <img src="#" alt="imagen de una carta/correo">
+                        </div>
+                    </div>
+                    <div class="contacto-content-rrss">
+                        <div>
+                            <p>Síguenos</p>
+                        </div>
+                        <div class="contacto-rrss-links">
+                            <div class="rss-links-facebook">
+                                <a href="#">
+                                    <button class="facebook-button">FACEBOOK</button>
+                                </a>
+                            </div>
+                            <div class="rss-links-instagram">
+                                <a href="#">
+                                    <button class="instagram-button">INSTAGRAM</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
+            <footer class="footer">
+                <div class="footer-content-top">
+                    <div class="footer-content-top-links">
+                        <h3>ENLACES DE INTERÉS</h3>
+                        <p><a href="#">Aviso Legal</a></p>
+                        <p><a href="#">Cookies</a></p>
+                    </div>
+                    <div class="footer-content-top-horarios">
+                        <h3>HORARIOS</h3>
+                        <p>Lunes a Domingo 07:30 - 01_30</p>
+                    </div>
+                    <div class="footer-content-top-contacto">
+                        <h3>CONTACTO</h3>
+                        <p>C/Conde de Peñalver 64 28006 - Madrid</p>
+                        <p>910 258 327 hola@mozzabar.es</p>
+                    </div>
+                </div>
+                <div class="footer-content-bottom">
+                    <div class="copyright-left">
+                        <p>Todos los derechos reservados</p>
+                    </div>
+                    <div class="footer-rss-links-right">
+                        <a href="#"><img src="#" alt="logo facebook con enlace a facebook"></a>
+                        <a href="#"><img src="#" alt="logo instagram con enlace a instagram"></a>
+                    </div>
+                </div>
+            </footer>
         </header>
     </body>
 </html>
