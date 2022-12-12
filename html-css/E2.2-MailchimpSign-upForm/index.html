@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Welcome to Mailchimp</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <style>
-           /* comentario */
-        </style>
     </head>
     <body>
-        
+        <div class="aside-logo">
+            <img src="./img/mailchimp_logo.png" alt="">
+        </div>
+        <main>
+            <h1><span>Welcome to Mailchimp</span></h1>
+            <p>
+                Find yourpeople. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Platform. Already have an account? <a href="#">Log in</a>
+            </p>
+            <form action="#">
+                <div class="container">
+                    <label for="email"><p><span>Email</span></p></label>
+                    <input id="input-email" type="email" name="email" required>
+
+                    <label for="name"><p><span>Name</span></p></label>
+                    <input id="input-name" type="text" name="name" required>
+                
+                    <label for="psw"><p><span>Password</span></p></label>
+                    <input id="input-psw" type="password" name="psw" required>
+                    <div class="check-terms-form ">
+                        <input type="checkbox" checked="checked" name="accept" required>
+                        <label for="accept">I accept the <a href="#">Terms of Service</a> and the <a href="#">Professional Terms of Service.</a></label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                  </div>
+            </form>
+        </main>       
     </body>
 </html>
