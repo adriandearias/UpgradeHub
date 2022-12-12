@@ -10,25 +10,50 @@
         </style>
     </head>
     <body>
-        <header class="header">
-            <div class="header-logo">
-                <img src="./img/issuu_logo.png" alt="">
-            </div>
-            <div class="header-login">
-                <div class="header-sign">
-                    <p>Already a user?</p>
-                    <a href="#">Sign in</a>
-                </div>
+        <header>
+            <img class="logo" src="./img/issuu_logo.png" alt="imagen logo">
+            <div>
+                <p>Already a user?</p>
+                <a href="#">Sign in</a>
             </div>
         </header>
         <main>
-            <div class="main-create-account">
-                <h2>Create and Issuu Account.</h2>
-                <div></div>
+            <p class="create-account-text">Create an Issuu Account.</p>
+            <div class="login-with">
+                <a href="#">
+                    <img class="signin-google" src="./img/signingoogle.png" alt="sign in with google">
+                </a>
+                <a href="#">
+                    <img class="signin-fb" src="./img/continuewithfacebook.png" alt="sign in with facebook">
+                </a>
             </div>
-            <div class="form">
-
-            </div>
+            <p>or with email</p>
+            <form action="#">
+                <div class="container">
+                    <label for="email"><p><span>Email</span></p></label>
+                    <input id="input-email" type="text" placeholder="e.g. john.doe@ail.com" name="email" required>
+                
+                    <label for="psw"><p><span>Password</span></p></label>
+                    <input id="input-psw" type="password" name="psw" required>
+                    <div class="check-terms-form ">
+                        <input type="checkbox" checked="checked" name="accept" required>
+                        <label for="accept">I accept the <a href="#">Terms of Service</a> and the <a href="#">Professional Terms of Service.</a></label>
+                    </div>
+                    <button type="submit">CREATE ACCOUNT</button>
+                  </div>
+            </form>
         </main>
+        <footer>
+            <div class="footer-copyright">
+                <p>Issuu Inc.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">DMCA</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
