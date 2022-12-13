@@ -25,11 +25,25 @@
                 
                     <label for="psw"><p><span>Password</span></p></label>
                     <input id="input-psw" type="password" name="psw" required>
-                    <div class="check-terms-form ">
-                        <input type="checkbox" checked="checked" name="accept" required>
-                        <label for="accept">I accept the <a href="#">Terms of Service</a> and the <a href="#">Professional Terms of Service.</a></label>
+                    <div class="pswd-req">
+                        <ul>
+                            <li>One lowercase character</li>
+                            <li>One uppercase haracter</li>
+                            <li>One number</li>
+                        </ul>
+                        <ul class="ul-right">
+                            <li>One special character</li>
+                            <li>8 characters minimum</li>
+                        </ul>
                     </div>
-                    <button type="submit">Sign Up</button>
+                    <div class="button-terms-container">
+                        <button type="submit">Sign Up</button>
+                        <div class="check-terms-form ">
+                            <input type="checkbox" name="reject-emails" required>
+                            <label class ="reject-e-form" for="reject-emails"><p>I don't want to receive emails about new Mailchimp products, best practices, or special offers.</p></label>
+                        </div>
+                    </div>
+                    <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <a href="#">Terms of Use</a> and <a href="#">Privac Policy.</a></p>
                   </div>
             </form>
         </main>       

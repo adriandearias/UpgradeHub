@@ -69,9 +69,15 @@ form div p span{
     font-weight: 600;
 }
 
+input{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 #input-name{
     width: 100%;
     height: 34px;
+    margin-bottom: 10px;
 }
 
 #input-email{
@@ -84,10 +90,51 @@ form div p span{
     height: 34px;
 }
 
+.pswd-req{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 14px;
+    display: flex;
+}
+
+ul {
+    display: inline-block;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+.ul-right{
+    margin-left: 100px;
+}
+
+li::before {
+    content: "•"; 
+    color: #55877A;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -0.5em}
+
+/* .reject-e-form{
+    font-size: 14px;
+    line-height: 0.7;
+} */
+
+.check-terms-form{
+    display: flex;
+}
+
+.check-terms-form p{
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 1.3;
+
+}
+
 button{
     border-radius: 3px;
     border-color: #AEADAD;
-    width: 140px;
+    width: 290px;
     height: 50px;
     background-color: white;
     font-size: 14px;
@@ -95,4 +142,10 @@ button{
     font-weight: 600;
     letter-spacing: 2px;
     cursor:pointer;
+    margin-right: 20px;
+}
+
+.button-terms-container{
+    display: flex;
+    margin-bottom: 40px;
 }
