@@ -1,0 +1,156 @@
+/* FONTS LOCALLY */
+@font-face {
+    font-family: Asap;
+    src: url(../assets/fonts/Asap-Regular.ttf);
+    font-weight: 400;
+    font-stretch: normal;
+}
+/* GLOBAL */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #efefef;
+    font-family: "Asap";
+}
+
+ul{
+    list-style-type: none;
+}
+
+.text-s{
+    font-size: 12px;
+}
+
+.text-m{
+    font-size: 14px;
+}
+
+.text-l{
+    font-size: 16px;
+}
+
+.text-xl{
+    font-size: 18px;
+}
+
+.text-xxl{
+    font-size: 26px;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #181818;
+}
+
+a:hover{
+    color: #67b500;
+}
+
+
+.txt-green{
+    color: #67b500;
+}
+
+/* HEADER LOGO LEFT */
+
+.header__top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 0.2);
+}
+
+.header__logo{
+    width: 330px;
+    padding-left: 12%;
+}
+
+/* TOP RIGHT ICON LINKS */
+.header__top-icons{
+    padding-right: 12%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    align-items: center;
+}
+
+.header__icon{
+    height: 16px;
+}
+
+.header__links{
+    padding-right: 10px;
+    
+}
+
+.nav__btn{
+    display: inline-block;
+    flex-wrap: nowrap;
+    width: 60px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #67b500;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.header__nav{
+    background-color: #fff;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-left: 8.1%;
+    margin-right: 10%;
+}
+
+/* MAIN  */
+.main__container{
+    margin-left: 12.7%;
+    margin-right: 12.7%;
+}
+/* MAIN NAVIGATION */
+.main__nav{
+    display: flex;
+    padding-bottom: 1%;
+}
+
+.filtro__btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #67b500;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* USING MOBILE FIRST */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
