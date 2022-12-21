@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.653);
+}
+
+.txt-s{
+    font-size: 12px;
+}
+
+.txt-m{
+    font-size: 16px;
+}
+
+.txt-l{
+    font-size: 18px;
+}
+
+.txt-xl{
+    font-size: 22px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.txt-red{
+    color: rgb(212, 81, 81);
+}
+
+.header__container{
+    width: 100%;
+}
+
+.header__nav{
+    position: absolute;
+}
