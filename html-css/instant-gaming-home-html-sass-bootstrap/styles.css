@@ -1,0 +1,7 @@
+@font-face {
+  font-family: ProximaNova;
+  src: url(assets/fonts/ProximaNova-Regular.otf);
+}
+h1 {
+  font-family: ProximaNova;
+}/*# sourceMappingURL=styles.css.map */
