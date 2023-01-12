@@ -108,7 +108,7 @@ for(let i=0; i<array.length; i++){
     }
 }
 
-while(i<array.length){
+while(i<array.length()){
     if(numeros[i]==2){
         posicionEncontrada = i
         break
