@@ -182,7 +182,34 @@ console.log('Return del método (las que hemos eliminado con splice): ' ,returnD
 //     FUNCION indexOf
 // -----------------------------
 //Devuelve el indice de la primera aparicion de un valor del array, devuelve -1 si no existe en el array
+//Se utiliza para strings y numeros en array no para trabajar cn objetos
 const alturasOlas = [4,5,6,7,8,5,3,2,1,2]
 const hora = alturasOlas.indexOf(2)
 
 console.log(hora);
+
+// -----------------------------
+//     EJERCICIO 6
+// -----------------------------
+//Utiliza indexOf para buiscar el indice de la hora donde se produjeron olas a 8 metros y elimina ese registro utilizando splice
+alturasOlas.splice(alturasOlas.indexOf(8),1)
+console.log(alturasOlas);
+
+const pagos = [{id: 1, cantidad: 30}, {id: 2, cantidad:15}, {id: 3, cantidad: 10}]
+const posicionPago2 = pagos.indexOf()
+console.log(posicionPago2);
+
+// -----------------------------
+//     EJERCICIO 7
+// -----------------------------
+//Utiliza un for para obtener la posicion que ocupa el pago con id 2
+let posicion = -1;
+for (let i = 0; i < pagos.length; i++) {
+    const pago = pagos[i]
+    if (pago.id === 2){
+        posicion = i
+        break
+    }
+}
+
+console.log(posicion);
