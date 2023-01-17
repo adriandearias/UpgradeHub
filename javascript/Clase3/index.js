@@ -213,3 +213,96 @@ for (let i = 0; i < pagos.length; i++) {
 }
 
 console.log(posicion);
+
+// -----------------------------
+//     EJERCICIO 8
+// -----------------------------
+//Dado el array de pagos, usa pop y push para generar un nuevo array de pagos con los pagos al reves
+const pagosReverse = []
+
+console.log('Mostramos array antes de vaciarla', pagos);
+for (let i = 0; i < pagos.length; i++) {
+  pagosReverse.push(pagos.pop());
+  i--
+}
+
+console.log(pagosReverse);
+
+// -----------------------------
+// -----------------------------
+// -----------------------------
+//     F U N C I O N E S 
+// -----------------------------
+// -----------------------------
+// -----------------------------
+
+ function multiplicar(num1, num2){
+  const resultado = num1*num2;
+  return resultado
+}
+
+const a = 1
+const b = 2
+
+const result = multiplicar(a,b)
+console.log(result)
+
+// -----------------------------
+//     EJERCICIO 9
+// -----------------------------
+//Funcion que sume 3 numeros pasados como parametro y devuelva el resultado -> mostrar el resultado por pantalla
+
+function sumar(par1, par2, par3){
+  const suma = par1+par2+par3
+  return suma
+  // se puede simplificar asi:
+  // return par1+par2+par3
+}
+
+const x = 1
+const y = 3
+const z = 6
+
+console.log(sumar(x,y,z));
+
+// -----------------------------
+//     EJERCICIO 10
+// -----------------------------
+//Funcion devuelva una palabra que comienza por la letra P
+
+function empiezaPorP(palabra) {
+  return palabra[0] === "P" || palabra[0] ==="p"
+}
+//devolvera true or false dependiendo si el string comienza por P
+console.log(empiezaPorP("Pedro"));
+
+// -----------------------------
+//     EJERCICIO 11
+// -----------------------------
+//Dado el array nombresPersonas, utiliza un for y aplica la funcion empiezaPorP a cada nombre para mostrar por consola si empieza o no por P
+const nombresPersonas = ['Pepe','Jose','Laura', 'pablo']
+
+for (const nombre of nombresPersonas) {
+  console.log(nombre, empiezaPorP(nombre));
+}
+
+
+// -----------------------------
+//     EJERCICIO 12
+// -----------------------------
+//Dado el array temperaturas crea una funcion que muestre la temp maxima
+
+const temperaturasStr = "35,36,37,40,37,52";
+const temperaturasSplit = temperaturasStr.split(",");
+
+function buscarMaxima(temperaturas){
+  let temperaturaMasAlta = temperaturas[0];
+  for (const temperatura of temperaturas) {
+      if (temperaturaMax < Number(temperatura)) {
+          temperaturaMax = Number(temperatura)
+      }
+  }
+  return temperaturaMax
+}
+
+console.log(buscarMaxima(temperaturasSplit));
