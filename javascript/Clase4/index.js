@@ -247,3 +247,14 @@ console.log(alumnosIncrementados);
 // output: [9,16,25,36]
 const numerosNew = [1,2,3,4,5,6,7,8]
 
+function reducirArrayExtremos2(numeros){
+  return numeros>2 && numeros<7
+}
+
+function elevarCuadrado(x){
+  return x => x*x
+}
+
+//lo logico hubiese sido crear una funcion donde paso array y le hago un array.splice(2,2) para eliminaar extremos pero no puedo hacerlo con filter.
+const arrayFiltrada = numerosNew.filter(reducirArrayExtremos2).map(elevarCuadrado())
+console.log(arrayFiltrada);
