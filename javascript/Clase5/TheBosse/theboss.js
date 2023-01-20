@@ -135,26 +135,49 @@ for (const poder in elBoss.poderes) {
 // "conozco a tu {parentesco del segundo familiar} {nombre del segundo familiar}"
 // "conozco a tu {parentesco del tercero familiar} {nombre del tercero familiar}"
 // "y conozco a tu {parentesco del cuarto familiar} {nombre del cuarto familiar}"
-console.log('"También se tu punto más debil, tus familiares, y les conozco..."');
+console.log("También se tu punto más debil, tus familiares, y les conozco...");
 for (const familiar in elBoss.familiares) {
   console.log(`Conozco a tu ${elBoss.familiares[familiar].parentesco} ${elBoss.familiares[familiar].nombre}`);
 }
 
 // 5: para matarlo tendrás que superar el reto y para ello tendrás que decirle las palabras
 // mágicas para que el mensaje quede tal que así "Jose luis, te miro y te destruyo".
-for (const retos in elBoss.reto) {
-  for (const i of elBoss.reto[retos]) {
-    console.log(elBoss.reto[retos][i]);
-  }
+let mensajeBoss = elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes;
+let mensajeFInal = []
+for (const value of mensajeBoss) {
+  typeof value === 'string' && mensajeFInal.push(value);
 }
+console.log(mensajeFInal.join(' ')); // concatenamos el mensaje del array separado por espacios
+
+//SOLUCION CON MAP
+// const definitivamenteSabesObject = elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes
+// definitivamenteSabesObject.splice(5,1)
+// const mensajeFinal = definitivamenteSabesObject.splice(7)
+// //const filtroNumerosObjeto = definitivamenteSabesObject.filter(value => !isNaN)
+// const mappedResults = Object.keys(definitivamenteSabesObject).map(key => {
+//   console.log(definitivamenteSabesObject[key]);
+// })
+// console.log(elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes);
+
+//PRUEBA CON ENTRIES
+// Object.entries(mensajeFinal)
+//   .map(entry => {
+//     const [key, value] = entry
+//     console.log({key, value});
+//   })  
+
 
 
 // Por último, como bonus, mostraremos por pantalla las urls de todas las imágenes de los poderes.
 for (const poder of elBoss.poderes) {
    for (const imagen of poder.imagenes) {
-    console.log(imagenes[imagen].url);
-   }
+    imagen.imagen1 && console.log(imagen.imagen1.url);
+    imagen.imagen2 && console.log(imagen.imagen2.url);
  }
+}
 // haremos la media de las edades de los familiares de elBoss.
-
+console.log(elBoss.familiares.reduce((accumulator, familiar) =>  accumulator + familiar.edad, 0)/elBoss.familiares.length);
 // y mostraremos por pantalla el mensajeFinal.
+for (const element of mensajeBoss) {
+  typeof element === 'object' && console.log(element.mensajeFinal);
+}
