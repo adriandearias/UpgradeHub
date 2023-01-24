@@ -47,40 +47,50 @@ function getPosicionQueso(tablero){
  * @param array tableroInicial foto inicial
  * @param array tableroJuego foto final 
 */
-function esFinJuego(tableroInicial, tableroFinal){
+function esFinJuego(tableroInicial, tablero){
     const posicionQueso = getPosicionQueso(tableroInicial);
-    const posicionRaton = getPosicionRaton(tableroFinal);
-    return posicionQueso[0] === posicionRaton[0] && posicionQueso[1] === posicionRaton[1] ? true : false
+    const posicionRaton = getPosicionRaton(tablero);
+    return posicionQueso === posicionRaton ? 'Fin' : 'Aun no has encontrado el queso'
 }
 
-console.log(getPosicionQueso(tableroJuego));
-console.log(getPosicionRaton(tableroJuego));
+console.log('Posición Queso es:',getPosicionQueso(tableroJuego));
+console.log('Posición Ratón es:',getPosicionRaton(tableroJuego));
 
-function moverRaton(tableroJuego, direccion){
+function moverRaton(tablero, direccion){
     const dir = direccion.toLowerCase()
-    const posRaton = getPosicionRaton(tableroJuego)
-    if (dir === 'u') {
-        //tableroJuego[posRaton] = ''
-        posRaton[0] = posRaton[0]-1 
-    }else if (dir === 'd') {
+    const posRaton = getPosicionRaton(tablero)
+    if (dir === 'u' && posRaton[0] > 0) {
+        tablero[posRaton[0]][posRaton[1]] = ''
+        posRaton[0] = posRaton[0]-1   
+        tablero[posRaton[0]][posRaton[1]] = 'r'
+        return esFinJuego(tablero, posRaton)
+    }else if (dir === 'd' && posRaton[0] < 2) {
+        tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[0] = posRaton[0]+1
-    }else if (dir === 'l') {
+        tablero[posRaton[0]][posRaton[1]] = 'r'
+        return esFinJuego(tablero, posRaton)
+    }else if (dir === 'l' && posRaton[1] > 0) {
+        tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[1] = posRaton[1]-1
-    }else if (dir === 'r') {
+        tablero[posRaton[0]][posRaton[1]] = 'r'
+        return esFinJuego(tablero, posRaton)
+    }else if (dir === 'r' && posRaton[1] < 2) {
+        tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[0] = posRaton[0]+1
+        tablero[posRaton[0]][posRaton[1]] = 'r'
+        return esFinJuego(tablero, posRaton)
     }else{
-        return 'La orden introducida no puede ser ejecutada o no es correcta';
+        return 'Warning: La orden introducida no puede ser ejecutada -> No es correcta o te sales del tablero';
     }
-    //Control de errores
-    // if(posRaton[0].length < 4  && posRaton[1].length < 4){
-    //     return posRaton
-    // }else{
-    //     return '¡¡El ratón no puede salirse del tablero!!'
-
-    // }
-    return posRaton
 }
-
 console.log(moverRaton(tableroJuego, 'u'));
 console.log(tableroJuego);
-console.log('Juego finalizado:', esFinJuego(tableroInicial, tableroJuego));
+console.log(moverRaton(tableroJuego, 'l'));
+console.log(tableroJuego);
+console.log(moverRaton(tableroJuego, 'l'));
+console.log(tableroJuego);
+console.log(moverRaton(tableroJuego, 'l')); //tiene que devolver error, se sale del tablero
+console.log(tableroJuego);
+console.log(moverRaton(tableroJuego, 'u'));
+console.log(tableroJuego);
+
