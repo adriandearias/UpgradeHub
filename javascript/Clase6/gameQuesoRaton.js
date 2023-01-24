@@ -56,12 +56,31 @@ function esFinJuego(tableroInicial, tableroFinal){
 console.log(getPosicionQueso(tableroJuego));
 console.log(getPosicionRaton(tableroJuego));
 
-function moverRaton(tableroFinal, direccion){
-    if (direccion === 'd') {
-        
+function moverRaton(tableroJuego, direccion){
+    const dir = direccion.toLowerCase()
+    const posRaton = getPosicionRaton(tableroJuego)
+    if (dir === 'u') {
+        //tableroJuego[posRaton] = ''
+        posRaton[0] = posRaton[0]-1 
+    }else if (dir === 'd') {
+        posRaton[0] = posRaton[0]+1
+    }else if (dir === 'l') {
+        posRaton[1] = posRaton[1]-1
+    }else if (dir === 'r') {
+        posRaton[0] = posRaton[0]+1
+    }else{
+        return 'La orden introducida no puede ser ejecutada o no es correcta';
     }
+    //Control de errores
+    // if(posRaton[0].length < 4  && posRaton[1].length < 4){
+    //     return posRaton
+    // }else{
+    //     return '¡¡El ratón no puede salirse del tablero!!'
+
+    // }
+    return posRaton
 }
 
-console.log(moverRaton());
-
-console.log(esFinJuego(tableroInicial, tableroJuego));
+console.log(moverRaton(tableroJuego, 'u'));
+console.log(tableroJuego);
+console.log('Juego finalizado:', esFinJuego(tableroInicial, tableroJuego));
