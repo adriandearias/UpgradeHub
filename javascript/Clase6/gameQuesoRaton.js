@@ -50,7 +50,7 @@ function getPosicionQueso(tablero){
 function esFinJuego(tableroInicial, tablero){
     const posicionQueso = getPosicionQueso(tableroInicial);
     const posicionRaton = getPosicionRaton(tablero);
-    return posicionQueso === posicionRaton ? 'Fin' : 'Aun no has encontrado el queso'
+    return posicionQueso === posicionRaton ? 'Fin, el ratón se ha comido el queso' : 'Aun no has encontrado el queso'
 }
 
 console.log('Posición Queso es:',getPosicionQueso(tableroJuego));
@@ -63,25 +63,22 @@ function moverRaton(tablero, direccion){
         tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[0] = posRaton[0]-1   
         tablero[posRaton[0]][posRaton[1]] = 'r'
-        return esFinJuego(tablero, posRaton)
     }else if (dir === 'd' && posRaton[0] < 2) {
         tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[0] = posRaton[0]+1
         tablero[posRaton[0]][posRaton[1]] = 'r'
-        return esFinJuego(tablero, posRaton)
     }else if (dir === 'l' && posRaton[1] > 0) {
         tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[1] = posRaton[1]-1
         tablero[posRaton[0]][posRaton[1]] = 'r'
-        return esFinJuego(tablero, posRaton)
     }else if (dir === 'r' && posRaton[1] < 2) {
         tablero[posRaton[0]][posRaton[1]] = ''
         posRaton[0] = posRaton[0]+1
         tablero[posRaton[0]][posRaton[1]] = 'r'
-        return esFinJuego(tablero, posRaton)
     }else{
-        return 'Warning: La orden introducida no puede ser ejecutada -> No es correcta o te sales del tablero';
+        console.log('Warning: La orden introducida no puede ser ejecutada -> No es correcta o te sales del tablero');
     }
+    return esFinJuego(tablero, posRaton)
 }
 console.log(moverRaton(tableroJuego, 'u'));
 console.log(tableroJuego);
