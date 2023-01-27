@@ -7,8 +7,12 @@
 
 
 
-function swap(array, index){
-
+function swap(array, index1, index2){
+    let change = array.splice(index2, 1, array[index1])
+    array.splice(index1, 1, change[0])
+    return array
 }
 
 const arrayNames = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
+
+console.log(swap(arrayNames, 1, 3));
