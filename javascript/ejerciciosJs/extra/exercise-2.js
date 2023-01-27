@@ -8,3 +8,12 @@ const totalPrice1 = ivaPrice1 + 4.95
 const price2 = 20;
 const ivaPrice2 = price2 * 1.21
 const totalPrice2 = ivaPrice2 + 4.95
+
+
+function precioFinal(importe){
+    return Number((importe*1.21+4.95).toFixed(2))
+}
+
+console.log(precioFinal(price1));
+console.log(precioFinal(price2));
+
