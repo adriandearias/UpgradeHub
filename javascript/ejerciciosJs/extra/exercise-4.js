@@ -7,4 +7,12 @@ const list = [
     {name: "Neng de castefa", gender: "pop", order: 1}
 ]
 
+let orderedByOrder = list.slice()
+orderedByOrder.sort(function(itemA,itemB){
+    return itemA.order - itemB.order
+});
+
+console.log('orderedByOrder:');
+console.log(orderedByOrder);
+
 
