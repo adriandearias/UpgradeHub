@@ -1,18 +1,15 @@
-Al siguiente javascript no funciona como deberia...podrias arreglarlo?
+// Al siguiente javascript no funciona como deberia...podrias arreglarlo?
+// Deberia de imprimir por consola "elGato".
 
-Deberia de imprimir por consola "elGato".
 
-```js
 const user = {name: "elGato", surname: "ConZancos"}
 
 function a(user){
-    const nama = b(user.nama);
-    console.log(nama)
+    const nama = b(user.name);
 }
 
 function b(name){
-    return "Que pasa " + name;
+    console.log(name)
 }
 
 a(user);
-```
