@@ -1,7 +1,6 @@
 # Español
-Dado el siguiente html usa querySelector para mostrar por consola todos los p
+<!-- Dado el siguiente html usa querySelector para mostrar por consola todos los p -->
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,4 +15,3 @@ Dado el siguiente html usa querySelector para mostrar por consola todos los p
     <p>Soy el power ranger Negro</p>
 </body>
 </html>
-```
