@@ -1,6 +1,5 @@
-Dado el siguiente html usa querySelector para mostrar por consola el p con el id #pillado
+<!-- Dado el siguiente html usa querySelector para mostrar por consola el p con el id #pillado -->
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,4 +11,3 @@ Dado el siguiente html usa querySelector para mostrar por consola el p con el id
     <p id="pillado">Aqui estoy 8)</p>
 </body>
 </html>
-```
