@@ -1,7 +1,5 @@
-# Español
-Dado el siguiente html usa querySelector para mostrar por consola todos los elementos con la clase .pokemon
+<!-- Dado el siguiente html usa querySelector para mostrar por consola todos los elementos con la clase .pokemon -->
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,4 +14,3 @@ Dado el siguiente html usa querySelector para mostrar por consola todos los elem
     <h4 class="pokemon">Squirtle</h4>
 </body>
 </html>
-```
