@@ -1,11 +1,11 @@
-import {Dia} from "./dia.js";
-import {estadoCieloToEmoji} from "./helpers.js";
-import {getClimaPorDiaSemana} from "./api.js";
+import { Dia } from "./dia.js";
+import { estadoCieloToEmoji } from "./helpers.js";
+import { getClimaPorDiaSemana } from "./api.js";
 
 //const lunes = new Dia('lunes', 20, 70, 'soleado');
 const semanaDiv = document.getElementById("div-semana");
 const ul = document.createElement("ul");
-semanaDiv.appendChild(ul)
+semanaDiv.appendChild(ul);
 
 const semana = [
   // new Dia("lunes", 20, 70, "soleado"),
@@ -19,7 +19,15 @@ const semana = [
 
 //Hacer un for a cada dia de la semana e incluir el dato recibido en el array de semana
 
-const diasSemana = ['lunes','martes','miercoles','jueves','viernes','sabado', 'domingo']
+const diasSemana = [
+  "lunes",
+  "martes",
+  "miercoles",
+  "jueves",
+  "viernes",
+  "sabado",
+  "domingo",
+];
 
 // for (const dia of diasSemana) {
 //   getClimaPorDiaSemana(dia, addDia)
@@ -39,29 +47,27 @@ const diasSemana = ['lunes','martes','miercoles','jueves','viernes','sabado', 'd
  *
  */
 
-function addDia(dia){
-  semana.push(dia)
+function addDia(dia) {
+  semana.push(dia);
 
   const li = document.createElement("li");
-  const span = document.createElement('span')
-  span.innerHTML = `${dia.diaSemana} ${dia.temperatura}ºC ${estadoCieloToEmoji(dia.estadoCielo)}` //${dia.getHumedadStr()
+  const span = document.createElement("span");
+  span.innerHTML = `${dia.diaSemana} ${dia.temperatura}ºC ${estadoCieloToEmoji(dia.estadoCielo)}`; //${dia.getHumedadStr()
   li.appendChild(span);
   ul.appendChild(li);
-
 }
 
 for (const dia of diasSemana) {
-  getClimaPorDiaSemana(dia, addDia)
+  getClimaPorDiaSemana(dia, addDia);
 }
 
 //TEST json TO OBJECT
-const personaJSON = `{"nombre": "oscar"}`
+const personaJSON = `{"nombre": "oscar"}`;
 //console.log(personaJSON);
-const personaObj = JSON.parse(personaJSON)
+const personaObj = JSON.parse(personaJSON);
 //console.log(personaObj);
 //console.log(personaObj.nombre);
 
 //TEST OBJECT to JSON
-const personaTexto = JSON.stringify(personaObj)
+const personaTexto = JSON.stringify(personaObj);
 //console.log(personaTexto);
-
