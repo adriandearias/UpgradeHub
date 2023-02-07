@@ -50,24 +50,9 @@ function addDia(dia){
 
 }
 
-
 for (const dia of diasSemana) {
   getClimaPorDiaSemana(dia, addDia)
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
 //TEST json TO OBJECT
 const personaJSON = `{"nombre": "oscar"}`
