@@ -1,15 +1,8 @@
-//function to get Pokemons in search-input
-// export function getPokemon(name){
-//     const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-//     const pokemonObj = await result.json()
-//     return pokemonObj
-// }
-
 //get 151 Pokemons(first generation)
-export async function getPokemons(pokemon, callback){
-    const result = await fetch(`https://pokeapi.co/api/v2/pokemon/bulbasaur`)//${pokemon}
+export async function getPokemons(drawPokemons){
+    const result = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`)
     const pokemonObj = await result.json()
-    return callback(pokemonObj)
+    return drawPokemons(pokemonObj)
 }
 
 

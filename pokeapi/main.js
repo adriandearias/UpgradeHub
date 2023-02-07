@@ -2,39 +2,41 @@ import {Pokemon} from "./pokemon.js";
 import {getPokemons} from "./api.js";
 
 const main$$ = document.querySelector("main");
-const div$$ = document.createElement('div')
+const div$$ = document.createElement('div');
 main$$.appendChild(div$$)
-// const mapCharacters = (characters) => {
-//     return characters.map((character) => ({
-//       name: character.name,
-//       img: character.image,
-//       series: character.amiiboSeries,
-//       gameSerie: character.gameSeries,
-//     }));
-//   };
 
 
-
-let pokemons = {}
-
-function drawPokemon(pokemon) {  
+function drawPokemons(pokemonObj) {  
     const span$$ = document.createElement("span");
     const img$$ = document.createElement("img")
-    const urlImage = pokemon.sprites.other.dream_world.front_default
+    const urlImage = pokemonObj
+    //.sprites.other.dream_world.front_default
 
     div$$.appendChild(img$$)
     div$$.appendChild(span$$)
 
-    img$$.setAttribute('src', urlImage)
-    span$$.innerHTML = `${pokemon.order}.${pokemon.name}`
+    //img$$.setAttribute('src', 'temp')
+    console.log(pokemonObj);
+    console.log(pokemonObj.results[1].url);
 
-    console.log(pokemon.order);
-    console.log(pokemon.sprites.other.dream_world.front_default);
-  }
+
+  //   <figure>
+  //               <img src="http://assets.climatecentral.org/images/made/3_16_16_upton_paris_720_405_s_c1_c_c.jpg" >
+  //               <figcaption>Fig.1 - París de noche (Enero de 2016)</figcaption>
+  //           </figure>
+
+  // }
+}
+
+function drawPokemon(i, pokemonObj){
+  console.log('aqui se pintan');
+}
 
 //init
 const init = () => {
-    getPokemons(pokemons, drawPokemon);
+    getPokemons(drawPokemons);
+    addEventListener('DOMContentLoaded', () => {});
+    console.log('Website Loaded')
   };
   
   init();
