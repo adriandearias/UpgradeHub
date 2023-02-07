@@ -1,0 +1,32 @@
+*{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* .contenedor{
+    
+} */
+
+h4{
+    color: rgb(181, 28, 51);
+}
+
+ul{
+    list-style-type: none;  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img{
+    width: 40px;
+    height: 100px;
+}
+
+li{
+    width: 150px;
+    margin: 10px 10px 10px 10px;
+    border: 0.1px solid #888888;
+    border-radius: 25px;
+    box-shadow: 2px 2px #888888;
+    display: block;
+    text-align: center;
+}
