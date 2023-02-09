@@ -6,6 +6,7 @@ import {getPokemons} from "./api.js";
 const arrayPokemons = [];
 const divContent$$ = document.getElementsByClassName('div-content');
 
+//function map
 
 function drawPokemons(pokemonObj) {  
     const span$$ = document.createElement("span");
