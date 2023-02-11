@@ -1,0 +1,97 @@
+****************************************************************
+**************        Mongodb-HELP          ********************
+****************************************************************
+
+by Adrián Cano > Last update > 02/11/23
+
+****************************************************************
+use nameBBDD        -> cambia nameBBDD
+use newName         -> si no existe la crea
+help                -> ayuda, muestra comandos
+show dbs            -> muestra (dbs, collections...etc)
+
+**IMPORTANTE**      -> so tabulamos al escribir la consola nos ayuda indicandonos las propiedades
+                    que podemos utilizaremos
+                    Ej:
+                        -> fb-alumnos.find[TABULAMOS AQUI] <- Nos indicará las opciones del find
+
+insert              -> db.alumnos.insert({nombre: 'Adrian'})    
+                    (insertar alumno a la vez que creamos la "coleccion" alumnos si no existe)
+                    -> actualmente si queremos insertar uno utilizaremos 
+                    "inserOne" o "insertMany" en vez de insert
+                    Resultado (por defecto le añade un id único alfanumerico para cada entidad)=
+                    {
+                    acknowledged: true,
+                    insertedIds: { '0': ObjectId("63e76ab9050b4e33964ce3ac") }
+                    }
+
+****************
+*****FIND*******
+****************
+
+db.alumnos.find()   -> Con find podemos ver y tambien filtrar lo que 
+                    buscamos de una tabla, por cualquier campo.
+                    Ej:
+                        -> 
+                        ->
+
+db.alumnos.findOne()-> utilizaremos unicamente con ID'show
+                    Ej:
+                        -> db.alumnos.findOne({_id: ObjectId("63e76ab9050b4e33964ce3ac")})
+            *Filtrar mostrando mas datos: 1 equivaldria a true/seleccionado, si no tiene esta propiedad, no la mostrará:
+                db.alumnos.findOne({_id: ObjectId("63e76ab9050b4e33964ce3ac")}, {_id:1})
+                db.alumnos.findOne({_id: ObjectId("63e76ab9050b4e33964ce3ac")}, {_id:1, nombre:1})
+                db.alumnos.findOne({_id: ObjectId("63e76ab9050b4e33964ce3ac")}, {_id:1, nombre:1})
+                db.alumnos.findOne({_id: ObjectId("63e76ab9050b4e33964ce3ac")}, {_id:1, nombre:1, edad:1})
+
+****************
+*****UPDATE*****
+****************
+db.alumnos.update({_id: ObjectId("63e76ab9050b4e33964ce3ac")}, {$set: {edad: 32} })
+    -> Le añadimos edad al id: ObjectId("63e76ab9050b4e33964ce3ac")
+
+    **Aunque haya muchos Pedros con el update solo le añadirá la edad únicamente al primero:
+    db.alumnos.update({nombre: 'Pedro'}, {$set: {edad: 32} })
+    Resultado:
+        {
+        acknowledged: true,
+        insertedId: null,
+        matchedCount: 1,
+        modifiedCount: 1,
+        upsertedCount: 0
+        }
+
+    **Para solventar esto, podemos utilizar el "updateMany", pero esto puede machacar datos, hay que tener cuidado con el filtro:
+    universidad> db.alumnos.updateMany({nombre: 'Pedro'}, {$set: {edad: 29} })
+        {
+        acknowledged: true,
+        insertedId: null,
+        matchedCount: 3,
+        modifiedCount: 3,
+        upsertedCount: 0
+        }
+
+****************
+*****REMOVE*****
+****************
+
+universidad> db.alumnos.remove({nombre: 'Pedro'})   -> Eliminaremos todos los datos en la colección
+                                                    que su nombre: sea 'Pedro'
+
+** Podemos eliminar la colección entera:
+    universidad> db.alumnos.drop()
+    true
+    universidad> show collections
+    universidad>                                                 
+
+**También podemos eliminar la BBDD entera (eliminará la BBDD en la que nos encontramos):
+    universidad> db.dropDatabase()
+        { ok: 1, dropped: 'universidad' }
+    universidad> use admin
+       switched to db admin
+    admin> show dbs
+        admin    40.00 KiB
+        config  108.00 KiB
+        local    40.00 KiB
+    admin>
+

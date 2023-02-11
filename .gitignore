@@ -1,2 +1,4 @@
 .env
 .DS_Store
+/mongodb/02112023/node_modules
+package-lock.json
