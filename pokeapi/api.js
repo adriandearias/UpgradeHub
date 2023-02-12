@@ -4,7 +4,6 @@ export async function getPokemons(arrayPokemons, drawPokemons){
         const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
         const pokemonResultToObject = await result.json()   
         arrayPokemons.push(pokemonResultToObject)  
-        console.log(pokemonResultToObject);  
     }
     return drawPokemons(arrayPokemons)
 }

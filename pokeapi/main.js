@@ -4,18 +4,19 @@ import {getPokemons} from "./api.js";
 
 //Global variable declaration
 const arrayPokemons = [];
-const divContent$$ = document.getElementsByClassName('div-content');
+const divContent$$ = document.querySelector('.div-content')
 
 //function map
 
-function drawPokemons(pokemonObj) {  
-    const span$$ = document.createElement("span");
-    const img$$ = document.createElement("img");
-
-    divContent$$.appendC
-
-    //img$$.setAttribute('src', 'temp')
-  
+function drawPokemons(arrayPokemons) {  
+    for (const pokemon of arrayPokemons) {
+      const img$$ = document.createElement("img");
+      const span$$ = document.createElement("span");
+      divContent$$.appendChild(img$$)
+      img$$.setAttribute('src', pokemon.sprites.other.dream_world.front_default)
+      img$$.setAttribute('class', 'img-pokemon')
+    }
+    return console.log(arrayPokemons);
 
 
   //   <figure>
@@ -26,16 +27,16 @@ function drawPokemons(pokemonObj) {
   // }
 }
 
-const findPokemon = ()=>{
-  const filteredPokemons = ''
-}
+// const findPokemon = ()=>{
+//   const filteredPokemons = ''
+// }
 
 //init
 const init = async () => {
     await getPokemons(arrayPokemons, drawPokemons);
     window.addEventListener('DOMContentLoaded', () => {});
     console.log('DOM fully loaded and parsed');
-    console.log(arrayPokemons);
+    //console.log(arrayPokemons[0].sprites.other.dream_world.front_default);
   };
   
   init();
