@@ -20,7 +20,7 @@ function promptExample(description){
 }
 
 function father(description, callback){
-    return userAnwsers.push(callback(description))
+    userAnwsers.push(`${description} ${callback(description)}`)
 }
 
 // const confirmValue = confirm('Soy un texto en confirm()');
