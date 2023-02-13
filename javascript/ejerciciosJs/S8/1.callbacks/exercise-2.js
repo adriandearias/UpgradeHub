@@ -33,3 +33,12 @@ father('¿Te ha costado entender el ejercicio?', promptExample)
 console.log(userAnwsers);
 
 
+// Resultado consola:
+
+// (4) ['¿Quieres acabar el ejercicio? true', 'Pulsa ok o cancelar true', 'Introduce un número:  a', '¿Te ha costado entender el ejercicio? a']
+// 0: "¿Quieres acabar el ejercicio? true"
+// 1: "Pulsa ok o cancelar true"
+// 2: "Introduce un número:  a"
+// 3: "¿Te ha costado entender el ejercicio? a"
+// length: 
+// 4
