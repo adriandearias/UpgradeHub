@@ -3,22 +3,19 @@
 // EJ: El nombre Abel tiene un 22 porciento de ser de ET y un 6 porciento de ser de MZ.
 
 
-const baseUrl = 'https://api.nationalize.io?name=';
+const baseUrl = 'https://api.nationalize.io?name='
 const btn = document.querySelector('button')
 const input = document.querySelector('input')
 const body = document.querySelector('body')
 
 btn.addEventListener('click', async () =>{
-    const result = await fetch(`${baseUrl}${input.value}`)
-    const resultToObject = await result.json()
+    const getData = await fetch(`${baseUrl}${input.value}`)
+    const objData = await getData.json()
 
-    console.log(resultToObject.country);
-    const p = document.createElement('p')
-
-    for (const object of resultToObject.country) {
+    for (const object of objData.country) {
         const p = document.createElement('p')
         object.country    
         body.appendChild(p)
-        p.innerHTML = `El nombre ${input.value} tiene ${object.probability} de ser ${object.country_id}`
+        p.innerHTML = `El nombre ${input.value} tiene ${(object.probability*100).toFixed(2)}% de ser ${object.country_id}.`
     }
 })

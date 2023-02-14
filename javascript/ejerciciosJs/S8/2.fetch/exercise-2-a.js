@@ -9,7 +9,7 @@ const btn = document.querySelector('button')
 const input = document.querySelector('input')
 
 btn.addEventListener('click', async () =>{
-    const result = await fetch(`${baseUrl}${input.value}`)
-    let resultToObject = await result.json()
-    console.log(resultToObject);
+    const getData = await fetch(`${baseUrl}${input.value}`)
+    let objData = await getData.json()
+    console.log(objData);
 })
