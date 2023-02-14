@@ -2,10 +2,17 @@
     font-family: 'Helvetica',"Apple Color Emoji","Segoe UI Emoji";
 }
 
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
 header{
     text-align: center;
     margin: 0 auto;
+    animation: fadein 2s;
 }
+
 body{
     height: 100%;
     background-color:#080c18;
@@ -15,6 +22,10 @@ body{
      /* #080c18; dark blue */
      /* #2e3445; blue */
      /* #fcd31c yellow */
+}
+
+main{
+    animation: fadein 2s;
 }
 
 .img-pokemon{
@@ -34,12 +45,13 @@ h3{
 }
 
 .div-buttons{
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     margin: 0;
     padding: 8px;
     background: #080c18;
 }
+
 
 .div-find{
     text-align: center;
@@ -86,6 +98,7 @@ input:focus::placeholder {
     touch-action: manipulation;
     width: fit-content;
     word-break: break-word;
+    animation: fadein 3s;
 }
 
 span{
