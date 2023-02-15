@@ -1,0 +1,48 @@
+let a:number|null = null
+let b:number = 1
+let c = b+a??0
+
+console.log(c); //result 1
+
+//transpilar -> npx tsc
+//# sourceMappingURL=index.js.map
+// se ejecuta el ./dist/*.js generado al transpilar
+
+function saludar(nombre: string): void{
+    console.log(`Hola que tal ${nombre}`);
+}
+
+const minombre:string = 'oscar'
+const numero: number = 2
+
+saludar(minombre)
+// error -> saludar(numero)
+
+function suma(a: number, b: number):number{
+    return a+b
+}
+const suma2 = (a:number,b:number):number=>{
+    return a+b
+}
+
+let d: number = suma(1,2)
+
+class Persona{
+    nombre:string
+    edad:number
+    constructor(nombre:string, edad:number){
+        this.nombre = nombre
+        this.edad = edad
+    }
+}
+
+const listaNumeros: number[] = [1,2,3,4]
+const listaPalabras: string[] = ['1', '2', '3']
+
+const nuevaPersona = new Persona('oscar', 50)
+
+//los objetos en typescript se sustituyen por clases
+const animal = {
+    nombre: 'Periquito',
+    edad: 5
+}
