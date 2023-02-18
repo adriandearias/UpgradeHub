@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?g2xp85');
-  src:  url('fonts/icomoon.eot?g2xp85#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?g2xp85') format('truetype'),
-    url('fonts/icomoon.woff?g2xp85') format('woff'),
-    url('fonts/icomoon.svg?g2xp85#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?veyyvs');
+  src:  url('fonts/icomoon.eot?veyyvs#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?veyyvs') format('truetype'),
+    url('fonts/icomoon.woff?veyyvs') format('woff'),
+    url('fonts/icomoon.svg?veyyvs#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,33 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-logo-ig:before {
   content: "\e900";
 }
-.icon-cart:before {
+.icon-arrow:before {
   content: "\e901";
 }
-.icon-pc:before {
+.icon-cart:before {
   content: "\e902";
 }
-.icon-play:before {
+.icon-pc:before {
   content: "\e903";
 }
-.icon-search .path1:before {
+.icon-play:before {
   content: "\e904";
-  color: rgb(255, 255, 250);
-}
-.icon-search .path2:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
 }
 .icon-switch:before {
-  content: "\e906";
-}
-.icon-user:before {
   content: "\e907";
 }
-.icon-xbox:before {
+.icon-user:before {
   content: "\e908";
+}
+.icon-xbox:before {
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e986";
 }
