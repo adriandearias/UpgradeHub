@@ -1,13 +1,11 @@
-//icons
-@import "assets/fonts/icons/style.css";
-
 //Settings
 @import "styles/settings/colors.settings";
 @import "styles/settings/bootstrap.settings";
 
 //botstrap
 @import "node_modules/bootstrap/scss/bootstrap-grid.scss";
-
+//icons
+@import "assets/fonts/icons/style.css";
 
 //elements
 @import "styles/elements/font-faces.elements";
@@ -18,3 +16,5 @@
 @import "styles/blocks/text.blocks";
 @import "styles/blocks/header.blocks";
 @import "styles/blocks/nav.blocks";
+@import "styles/blocks/btn.blocks";
+@import "styles/blocks/card.blocks"

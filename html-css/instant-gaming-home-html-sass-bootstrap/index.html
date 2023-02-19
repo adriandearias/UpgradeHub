@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Instant-Gaming.com</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <header class="b-header p-7">
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
+        <header class="b-header p-7 py-4">
+            <div class="d-flex justify-content-between">
+                <div class="mt-6">
                     <span class="b-text b-text--logo icon-logo-ig"></span>
                 </div>
                 <div>
@@ -20,18 +20,72 @@
                         <a class="px-4" href="">Soporte 24/7</a>
                     </div>
                     <nav class="b-nav">
-                        <a class="d-flex align-items-center mx-6 py-7" href=""><span class="me-4 b-text b-text--l icon-pc"></span>PC<span class="ms-4 icon-arrow"></span></a>
-                        <a class="d-flex align-items-center mx-6 py-7" href=""><span class="me-4 b-text b-text--l icon-play"></span>Playstation<span class="ms-4 icon-arrow"></span></a>
-                        <a class="d-flex align-items-center mx-6 py-7" href=""><span class="me-4 b-text b-text--l icon-xbox"></span>Xbox<span class="ms-4 icon-arrow"></span></a>
-                        <a class="d-flex align-items-center mx-6 py-7" href=""><span class="me-4 b-text b-text--l icon-switch"></span>Nintendo<span class="ms-4 icon-arrow"></span></a>
+                        <a class="b-nav__item d-flex align-items-center mx-6 py-7" href="">
+                            <span class="me-4 b-text b-text--l icon-pc"></span>PC<span class="b-nav__arrow ms-4 icon-arrow"></span>
+                        </a>
+                        <a class="b-nav__item d-flex align-items-center mx-6 py-7" href="">
+                            <span class="me-4 b-text b-text--l icon-play"></span>Playstation<span class="b-nav__arrow ms-4 icon-arrow"></span>
+                        </a>
+                        <a class="b-nav__item d-flex align-items-center mx-6 py-7" href="">
+                            <span class="me-4 b-text b-text--l icon-xbox"></span>Xbox<span class="b-nav__arrow ms-4 icon-arrow"></span>
+                        </a>
+                        <a class="b-nav__item d-flex align-items-center mx-6 py-7" href="">
+                            <span class="me-4 b-text b-text--l icon-switch"></span>Nintendo<span class="b-nav__arrow ms-4 icon-arrow"></span>
+                        </a>
                         <a class="b-nav__search" href=""><span class="icon-search"></span></a>
                     </nav>
                 </div>
-                <div>
-                    <a href=""><span class="icon-cart"></span></a>
-                    <a href=""><span class="icon-user"></span></a>
+                <div class="mt-6">
+                    <a href=""><span class="mx-4 b-text b-text--xl icon-cart"></span></a>
+                    <a href=""><span class="mx-4 b-text b-text--xl icon-user"></span></a>
                 </div>
             </div>
         </header>
+        <main class="container">
+            <section>
+                <div class="d-flex justify-content-between">
+                    <h2 class="my-2 b-text b-text--xl">Tendencias</h2>
+                    <button class="b-btn">Ver todo</button>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <figure class="b-card">
+                            <div class="b-card__frame">
+                                <span class="b-card__discount">-27%</span>
+                                <img src="https://s2.gaming-cdn.com/images/products/7072/380x218/hogwarts-legacy-pc-juego-steam-europe-cover.jpg?v=1676826000" alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <figcaption class="b-text">Hogwarts Legacy</figcaption>
+                                <span class="b-text">43.99€</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <figure class="b-card">
+                            <div class="b-card__frame">
+                                <span class="b-card__discount">-36%</span>
+                                <img src="https://s1.gaming-cdn.com/images/products/9666/380x218/returnal-pc-juego-steam-cover.jpg?v=1676826000" alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <figcaption class="b-text">Returnal</figcaption>
+                                <span class="b-text">38.39€</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <figure class="b-card">
+                            <div class="b-card__frame">
+                                <span class="b-card__discount">-30%</span>
+                                <img src="https://s2.gaming-cdn.com/images/products/7072/380x218/hogwarts-legacy-pc-juego-steam-europe-cover.jpg?v=1676826000" alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <figcaption class="b-text">The Settlers: New Allies</figcaption>
+                                <span class="b-text">41.99€</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

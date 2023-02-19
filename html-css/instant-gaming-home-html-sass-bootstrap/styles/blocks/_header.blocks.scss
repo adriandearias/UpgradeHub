@@ -1,6 +1,23 @@
 .b-header{
-    background-image: url('assets/img/bg-header-howarts-legacy.jpg');
-    height: 576px;
+    background-image: url('https://s2.gaming-cdn.com/img/products/7072/hcover/7072.jpg?v=1676804400');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 500px;
     width: 100%;
     box-sizing: border-box;
-} 
+    position: relative;
+    &::after{
+        content: "";
+        clip-path: polygon(0 100%,100% 100%,0 0);
+        background: var(--color-dark);
+        height: 60px;
+        min-width: 1700px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        z-index: 1;
+        left: 0;
+    }
+}   
+
+    

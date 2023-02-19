@@ -14,4 +14,15 @@
         width: 16px;
         height: 16px;
     }
+    &__item{
+        position: relative;
+        padding-right: 16px;
+    }
+    &__arrow{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        font-size: 8px; 
+    }
 }

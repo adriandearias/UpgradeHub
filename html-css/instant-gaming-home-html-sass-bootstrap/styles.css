@@ -5512,6 +5512,8 @@ body {
   color: var(--color-light);
   font-family: ProximaNova;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -5521,22 +5523,49 @@ a {
 
 .b-text {
   font-size: 15px;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .b-text--l {
   font-size: 18px;
   color: var(--color-white);
 }
+.b-text--2l {
+  color: var(--color-white);
+  font-size: 23px;
+}
+.b-text--xl {
+  color: var(--color-white);
+  font-size: 28px;
+}
 .b-text--logo {
   color: var(--color);
   font-size: 32px;
 }
+.b-text--light {
+  font-weight: 100;
+}
 
 .b-header {
-  background-image: url("assets/img/bg-header-howarts-legacy.jpg");
-  height: 576px;
+  background-image: url("https://s2.gaming-cdn.com/img/products/7072/hcover/7072.jpg?v=1676804400");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+}
+.b-header::after {
+  content: "";
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 0 0);
+          clip-path: polygon(0 100%, 100% 100%, 0 0);
+  background: var(--color-dark);
+  height: 60px;
+  min-width: 1700px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  z-index: 1;
+  left: 0;
 }
 
 .b-nav {
@@ -5554,4 +5583,48 @@ a {
   border-radius: 50px;
   width: 16px;
   height: 16px;
+}
+.b-nav__item {
+  position: relative;
+  padding-right: 16px;
+}
+.b-nav__arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 8px;
+}
+
+.b-btn {
+  padding: 14px;
+  background-color: var(--color-medium);
+  color: var(--color-white);
+  border-radius: 35px;
+  border: 0;
+  font-weight: 700;
+}
+
+.b-card {
+  margin: 0;
+}
+.b-card__frame {
+  position: relative;
+}
+.b-card__discount {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--color-white);
+}
+.b-card__discountafter {
+  content: "";
+  border-radius: 10px 5px;
+  transform: skewX(16deg);
+  width: 100%;
+  border-radius: 10px 5px;
+  background-color: var(--color);
+  position: absolute;
+  left: 0;
+  top: 0;
 }/*# sourceMappingURL=styles.css.map */

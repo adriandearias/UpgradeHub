@@ -1,0 +1,24 @@
+.b-card{
+    margin: 0;
+    &__frame{
+        position: relative;
+    }
+    &__discount{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: var(--color-white);
+
+        &after{
+            content:"";
+            border-radius: 10px 5px;
+            transform: skewX(16deg);
+            width: 100%;
+            border-radius: 10px 5px;
+            background-color: var(--color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
