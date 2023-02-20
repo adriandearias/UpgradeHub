@@ -5,4 +5,10 @@
     border-radius: 35px;
     border: 0;
     font-weight: 700;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out;
+    &:hover{
+        background-color: var(--color);
+        
+    }
 }
