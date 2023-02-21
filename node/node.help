@@ -1,0 +1,23 @@
+     NODE.JS
+-----------------
+Node.js nos va a permitir coenctar la parte de cluente con la parte del servidor
+
+Node.js - Camarero
+front - cliente (Angular, React)
+servidor - cocina
+
+
+package.json
+Para crearlo utilizaremos:
+
+npm init -y
+npm run test
+npmi i express
+npm uninstall express 
+
+//install dependencies
+npm i
+
+
+
+
