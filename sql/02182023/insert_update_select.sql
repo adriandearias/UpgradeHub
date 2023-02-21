@@ -64,5 +64,5 @@ equipo_etapa ee ON ee.nombreEquipo = cic.equipoNombre JOIN
 etapa e ON e.id = ee.idEtapa;
 
 -- listado de ciclistas cuyo nombre comience por alter
-SELECT * FROM ciclista WHERE nombre LIKE 'AL%'
-SELECT * FROM ciclista WHERE nombre LIKE '%A%'
+SELECT * FROM ciclista WHERE nombre LIKE 'AL%';
+SELECT * FROM ciclista WHERE nombre LIKE '%A%';
