@@ -1,0 +1,32 @@
+     SQL
+---------------
+CREATE DATABASE
+---------------
+CREATE DATABASE <nombre>
+
+---------------
+CREATE TABLE
+---------------
+CREATE TABLE <NOMBRE>
+    NOMBRE_CAMPOS   TIPO    ARGS
+    NOMBRE_CAMPOS   TIPO    ARGS
+    ...
+    REFERENCES(FOREIGNKEYS)
+
+    EX: 
+        NOMBRE_CAMPO    -> ID, DORSAL, NOMBRE, FECHA
+        TIPO            -> VARCHAR, FLOAT, INT, BIT, DATE
+        ARGS            -> PRIMARY KEY, NOT NULL(REQ), AUTOINCREMENTAL...
+
+------------------------------------------------------------------------------------------
+Integer Types (Exact Value) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT
+------------------------------------------------------------------------------------------
+Type 	    Storage (Bytes) 	    Minimum Value Signed 	    Minimum Value Unsigned 	    Maximum Value Signed    Maximum Value Unsigned
+TINYINT 	1 	                    -128 	                    0 	                        127 	                255
+SMALLINT 	2 	                    -32768 	                    0 	                        32767 	                65535
+MEDIUMINT 	3 	                    -8388608 	                0 	                        8388607 	            6777215
+INT 	    4 	                    -2147483648 	            0 	                        2147483647 	            4294967295
+BIGINT 	    8 	                    -263 	                    0 	                        263-1 	                264-1
+
+
+SELECT * FROM universidad.alumno;
