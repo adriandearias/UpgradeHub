@@ -1,11 +1,8 @@
      NODE.JS
 -----------------
-Node.js nos va a permitir coenctar la parte de cluente con la parte del servidor
-
-Node.js - Camarero
-front - cliente (Angular, React)
-servidor - cocina
-
+Node.js nos va a permitir coenctar la parte de cliente con la parte del servidor
+nodemon -> sirve para abrir servidor y se queda escuchando la app
+express -> libreria server
 
 package.json
 Para crearlo utilizaremos:
@@ -18,6 +15,8 @@ npm uninstall express
 //install dependencies
 npm i
 
+//Solo se instalara en entornos de desarrollo
+npm i --save -dev nombrelibreria
 
-
-
+req -> request  -> petición > req.params, req.user, req.file
+res -> response -> respuesta -> res.send, res.json
