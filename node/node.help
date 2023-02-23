@@ -20,3 +20,10 @@ npm i --save -dev nombrelibreria
 
 req -> request  -> petición > req.params, req.user, req.file
 res -> response -> respuesta -> res.send, res.json
+
+
+//metodos que tenemos
+     //! post -> mandar datos -> create -> C
+     //! get -> leer datos -> leer -> read -> R
+     //! put -> update -> U
+     //! delete -> borra -> D

@@ -1,0 +1,20 @@
+npm init -y
+
+p.json
+ "scripts": {
+    "start": "node index.js"
+  },
+
+
+npm i nodemon express dotenv
+
+npm run start
+
+npm run dev 
+
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+
+  
