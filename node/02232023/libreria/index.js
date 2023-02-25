@@ -8,10 +8,13 @@ require('dotenv').config();
 //*Creamos variable port y le damos el valor del puerto asignado en .env.
 const PORT = process.env.PORT;
 
+//! importamos las rutas de los libros
+const librosRoutes = require("./src/api/libros/libros.routes");
+
 //* Traemos la bbdd
 const db = require('./src/utils/db.js')
-//* Estoy ejecutando
-
+//* Estoy ejecutando la funcion connectDB de mi archivo db.js
+db.connectDB();
 
 //? traemos la libreria express para tener las opciones del servidor con express
 const express = require("express");
@@ -21,12 +24,20 @@ const express = require("express");
 //? que podré ejecutar para que realice mi servidor.
 const server = express();
 
+const cors = require('cors');
+server.use(cors({
+    origin: ["*"] //podemos restringir por ip, si no lo ponemos permite todo al igual que *
+}));
+
+//! una ruta que usa els ervidor para indicarme que /libros 
+server.use('/libros', librosRoutes);
+
 server.use('/', (req, res)=>{
-    res.send('Working')
+    res.send('Working, go to <a href= http://localhost:8000/libros>http://localhost:8000/libros</a>')
 })
 
 //? Una función que ejcuta mi servidor, en este caso para levantar o 
 //? escuchar (el servidor), es decir, que sea accesible
-server.listen(8000, () =>{
+server.listen(PORT, () =>{
     console.log("Server is running! Ok -> http://localhost:"+PORT);
 });

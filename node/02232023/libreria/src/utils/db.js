@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 //? Guardamos en una variabl el link a la bbdd para poder conectar
 const dbLink = process.env.DB_URL;
-
+//? intentamos conectarnos a la bbdd con un try
 const connectDB = async() =>{
     try{
         mongoose.set('strictQuery', true) //esta linea es para que no aparezca warning
