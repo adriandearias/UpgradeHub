@@ -16,3 +16,9 @@ typescript/node_modules
 /node/02252023/school/package-lock.json
 /node/02252023/school/.env
 /node/02232023/libreria/src/utils/seeds
+
+/node/backend-movies/src/utils/seeds
+/node/backend-movies/.env
+/node/backend-movies/package-lock.json
+/node/backend-movies/node_modules
+
