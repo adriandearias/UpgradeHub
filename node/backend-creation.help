@@ -1,0 +1,63 @@
+//! Backend creation guide step by step
+//! Created by @adriandearias on 02/26/23
+// Las update 02/26/23
+
+---------------------
+//? Package Json
+---------------------
+mkdir newpath                           -> cd newpath
+npm init -y                             -> creates package.json (now we can use <npm> packages)
+
+"scripts": {                            -> we need to go to scripts side and put this. Now in command line
+    "start": "node index.js",           we can start the server using "npm run start" <- start is the function
+    "dev": "nodemon index.js"           we declared in the script.
+},                                      -> nodemon script to restart automatically the server on each change.
+                                        >>>> npm run dev <<<<
+---------------------
+//? Dependencies
+---------------------
+//* Express.js
+npm install express                     -> you can use "install" or "i" -> npm i express
+//* dotenv
+npm i dotenv                            -> we install dotenv > Loads environment variables from .env file
+//* nodemon                     
+npm i  nodemon                          -> tool that helps develop Node. js based applications by automatically 
+                                        restarting the node application when file changes in the directory are detected.             
+---------------------
+//? .gitignore              
+---------------------
+touch .gitignore                        -> creates .gitignore file. We need to write inside each path (.env - 
+                                        /node_modules package-lock.json, seeds.js...) with the files that 
+                                        we don't want to upload to github.
+
+---------------------
+//? index.js             
+---------------------
+touch index.js                          -> (in terminal) creates index.js
+
+const express = require('express');     -> inside index.js, we need to declare and call express.js
+const server = express()
+const PORT = process.env.PORT;          -> we need to hide, port and DB_URL, with process.env.PORT; 
+                                        we call the const PORT encrypted, the same with the DB_URL
+                                        (the DB URL Contains password, this way we hide the password)
+require('dotenv').config();             -> we call dependency installed "dotenv"
+
+---------------------
+//? .env            
+---------------------
+touch .env                              -> we create .env file to set:
+PORT = 5000;                            -> we store the PORT in .env
+
+---------------------
+//? Express.js <- Config inside index.js 
+---------------------
+server.use('/', (req, res) => {         -> This res.send you can find in: http://localhost:5000
+  res.send('Hello!');
+});
+
+server.listen(PORT, () => {             -> Remember, inside const server we have: const server = express()    
+  console.log(`Server running in http://localhost:${PORT}`);
+});
+
+//! CRUD (Create, Read, Update and Delete).
+
