@@ -22,3 +22,6 @@ typescript/node_modules
 /node/backend-movies/package-lock.json
 /node/backend-movies/node_modules
 
+/node/02282023/package-lock.json
+/node/02282023/node_modules
+/node/02282023/.env
