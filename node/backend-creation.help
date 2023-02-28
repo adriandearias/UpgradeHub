@@ -22,7 +22,8 @@ npm install express                     -> you can use "install" or "i" -> npm i
 npm i dotenv                            -> we install dotenv > Loads environment variables from .env file
 //* nodemon                     
 npm i  nodemon                          -> tool that helps develop Node. js based applications by automatically 
-                                        restarting the node application when file changes in the directory are detected.             
+                                        restarting the node application when file changes in the directory are detected.      
+//* cors y mongoose         
 ---------------------
 //? .gitignore              
 ---------------------
@@ -61,3 +62,21 @@ server.listen(PORT, () => {             -> Remember, inside const server we have
 
 //! CRUD (Create, Read, Update and Delete).
 
+-------------------------------------
+//? ./src/api/movies/movies.routes
+-------------------------------------
+mkdir ./src                             -> we need to create ./src/api/movies/movies.routes
+mkdir ./src/api
+mkdir ./src/api/movies
+touch ./src/api/movies/movies.routes.js
+
+const router = require(                 -> < index.js we need to declare const router 
+    "./src/api/libros/libros.routes");
+
+server.use('/', router);                -> && inside the index.js we need to declare it too.
+
+----------------------------------------------------
+//? ./src/api/movies/movies.routes.js <-- inside
+----------------------------------------------------
+const router = require(                 -> Now inside movies.routes.js we declare router we called inside
+    "express").Router();                index.js
