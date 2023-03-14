@@ -1,5 +1,6 @@
 npm install -g @angular/cli     //install angular
 ng v                            //show version
+
 ng new firstApp                 // init project + y + scss
 npm i                           // instala dependencias
 ng serve                        // run serve
