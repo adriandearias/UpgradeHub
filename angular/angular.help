@@ -8,3 +8,8 @@ ng serve                        // run serve
 
 ng generate component padre     //create component
 
+ng g c core/nav
+ng g c pages/home
+
+ng g i models/home              // only creates a folder with a .ts file
+

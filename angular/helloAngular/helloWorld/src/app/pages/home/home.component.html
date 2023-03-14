@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<p>{{object.name}} {{object.desc.number}}</p>
+<img src="{{object.desc.image.src}}" alt="{{object.desc.image.alt}}">
+
+<div [ngClass]="{alive: alive, death: !alive}">This is ngClass div true, color green</div>
+<p [ngStyle]="{color:red}">ngStyle color red</p>
+
+<h1>Events</h1>
+<button (click)="hello()">Say Hello on click event!</button>
+<button (click)="getEvent($event)">Get Event on click!</button>
+<input (focus)="getInput($event)" type="text">
+<p [ngClass]="{alive: alive, death: !alive}">Test ngClass</p>
+<button (click)="changeNgClass()">Change color NgClass on Click</button>
+
+
+<p>{{result}}</p>
+<button (click)="suma()">Sumar</button>
+<button (click)="resta()">Restar</button>
+
+<h2></h2>
+<p *ngIf="hora<=15">Son menos de las 15:00</p>
+<p *ngIf="hora>15">Son más de las 15:00</p>
+
+<ng-template [ngIf]="visible===true">
+    <h2>Block</h2>
+    <p>The content of this p it shows if var public visible is === true</p>
+</ng-template>
+
+<ul>
+    <li *ngFor="let hero of heroes; let index = index;">{{index}} {{hero}}</li>
+</ul>
