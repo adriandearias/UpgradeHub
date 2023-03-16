@@ -1,4 +1,6 @@
-export const productsData = [
+import { ProductI } from './product.interface';
+
+export const productsData: ProductI[] = [
   {
     createdAt: '2022-04-19T22:51:13.449Z',
     name: 'Handmade Metal Keyboard',

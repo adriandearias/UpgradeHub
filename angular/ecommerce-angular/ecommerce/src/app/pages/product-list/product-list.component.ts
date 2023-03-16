@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent {
+
   public products = productsData;
 
-  
+  public removeProduct(id: string){
+    console.log(`Remove product ${id}`);
+    
+  }
 }

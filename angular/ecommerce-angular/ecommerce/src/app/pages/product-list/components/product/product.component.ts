@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit{
     
   }
 
-  public removeProduct (){
+  public removeProduct(){
     this.onRemoveProduct.emit();
   }
 }

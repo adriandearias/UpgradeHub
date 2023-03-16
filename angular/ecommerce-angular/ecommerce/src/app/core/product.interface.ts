@@ -1,5 +1,5 @@
 export interface ProductI{
-    createdAt?: Date;
+    createdAt?: string;
     name:string;
     color: string;
     price: string;
@@ -23,8 +23,7 @@ export interface ProductI{
 // }
 
 
-export type ProductMaterial = 
-| 'Steel'
+export type ProductMaterial = 'Steel'
 | 'Metal'
 | 'Cotton'
 | 'Metal'
@@ -34,4 +33,4 @@ export type ProductMaterial =
 | 'Frozen'
 | 'Rubber'
 | 'Wooden'
-| 'Soft'
+| 'Soft';
