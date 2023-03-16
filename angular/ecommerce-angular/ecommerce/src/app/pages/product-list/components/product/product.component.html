@@ -1,0 +1,9 @@
+<div *ngIf="productToShow">
+    <p>{{productToShow.name}}</p>
+    <p>{{productToShow.description}}</p>
+    <p>{{productToShow.materials}}</p>
+    <button
+        class="product__button product__button--remove"
+        (click)="removeProduct()"
+    >Remove</button>
+</div>

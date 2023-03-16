@@ -1,0 +1,17 @@
+.product{
+    border: 1px solid gray;
+    padding: 16px;
+    
+    &__materials{
+        margin-bottom: 8px;
+    }
+    &__button{
+        border: none;
+        padding: 8px;
+        &--remove{
+            background-color: blueviolet;
+            font-weight: 300;
+            color: white;
+        }
+    }
+}
