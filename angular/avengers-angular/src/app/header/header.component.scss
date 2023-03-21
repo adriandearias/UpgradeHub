@@ -1,10 +1,15 @@
 .header{
     display: inline-block;
     text-align: center;
-    padding: 10px 0 20px 0;
+    &__img{
+        width: 18%;
+        &--pd{
+            padding: 0;
+        }
+    }
+    &--pd{
+        padding: 10px 0 50px 0;
+    }
 }
 
-img{
-    width: 20%;
-}
 

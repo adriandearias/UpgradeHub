@@ -25,7 +25,7 @@ export const avengersData: AvengersInterface[] = [
   },
   {
     hero: 'Black Widow',
-    name: "Natalia 'Natasha' Alianovna Romanova",
+    name: "Natasha Alianovna Romanova",
     link: 'http://marvel.com/characters/6/black_widow',
     img: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/011blw_ons_crd_04.jpg',
     isActive: false
