@@ -14,4 +14,19 @@
             color: white;
         }
     }
+    &__text{
+        margin-bottom: 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+    }
+    &__image{
+        object-fit: cover; //! repasar
+    }
 }

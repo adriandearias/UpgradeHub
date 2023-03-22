@@ -1,6 +1,6 @@
 <div *ngIf="avenger" (click)="activeAvenger()">
-    <div class="avenger" [ngClass]="{'avengersActive': avenger.isActive === true, 'avenger': avenger.isActive === false}">
-        <a href="{{avenger.link}}"><img class="avenger__img" src="{{avenger.img}}" alt="{{avenger.hero}}"></a>
+    <div class="avenger" [ngClass]="{'avenger--active': avenger.isActive}">
+        <a href="{{avenger.link}}"><img class="avenger__img" src="{{avenger.img}}" alt=""></a>
         <h3>{{avenger.hero}}</h3>
         <span>{{avenger.name}}</span>
     </div>

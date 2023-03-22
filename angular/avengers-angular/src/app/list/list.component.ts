@@ -15,6 +15,7 @@ export class ListComponent {
     if (avengers.isActive) {
       avengers.isActive = false;
       this.avengersActive--
+      console.log('active on click');
     }
     else{
       avengers.isActive = true;
