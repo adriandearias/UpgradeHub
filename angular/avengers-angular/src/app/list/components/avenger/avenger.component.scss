@@ -6,7 +6,8 @@
         width: 200px;
     }
     &--active{
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.492);
         color: bisque;
+        border-radius: 30px;
     }
 }
