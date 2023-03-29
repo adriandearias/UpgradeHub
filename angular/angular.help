@@ -13,6 +13,10 @@ ng g c pages/home
 
 ng g i models/home              // only creates a folder with a .ts file
 
+//! scripts
+"start:open": "ng serve --open",
+
+
 //! Cambios angular.json recomendables/optimos
 //* para tenerlo más organizado creamos en src/ la carpeta /styles y añadimos styles.scss:
 *Cambiar en apartados archuitect y test
@@ -23,28 +27,5 @@ ng g i models/home              // only creates a folder with a .ts file
 //* modificamos el nombre/prefijo por defecto de los componentes al crearlos:
  "prefix": "ecom",
 
-
-ng generate module product-list
-ng generate component product-list
-
-
-//! En el modulo declaramos/importamos el componente:
-? product-list.module.ts -> 
-exports: [
-    ProductListComponent
-  ]
-
-? app.module.ts
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ProductListModule  <--------------------
-  ],
-
-//* Creamos una carpeta <product> dentro de components se exporta el modulo automaticamente al estar
-//* dentro de un modulo
-? mkdir product | cd product
-? ng g c product
-
-//* Dentro de la carpeta /app creamos la carpeta /core
-touch product.data.ts
+//! Para que Angular resuelva .json añadir esta linea en tsconfig.json
+"resolveJsonModule": true,
