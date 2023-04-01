@@ -29,3 +29,12 @@ ng g i models/home              // only creates a folder with a .ts file
 
 //! Para que Angular resuelva .json añadir esta linea en tsconfig.json
 "resolveJsonModule": true,
+
+//! creamos los modulos necesarios (se crea directamente dentro del directorio src/app, no hace falta estar dentro)
+ng g m modules/Auth --routing
+ng g m modules/History --routing
+ng g m modules/Home --routing
+ng g m modules/Tracks --routing
+
+
+
