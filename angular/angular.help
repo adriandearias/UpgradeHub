@@ -36,5 +36,36 @@ ng g m modules/History --routing
 ng g m modules/Home --routing
 ng g m modules/Tracks --routing
 
+//TODO para crear el mudulo en shared o bien lo creamos a mano o utilizamos el siguiente comando para que no genere subcarpetas:
+//TODO en: src/app/
+ng g m shared/shared --flat
+//TODO creamos la carpeta components dentro de shared y los generamos:
+ng g c shared/components/SideBar
+ng g c shared/components/MediaPlayer
+ng g c shared/components/HeaderUser
+
+//! LAZY LOAD
+//! that loads ngModules as needed. Lazy loading helps keep initial bundle sizes smaller, woch in turn helps
+//! decreases load times.
+
+//? Creamos un componente HomePage dentro de 'modules/home/pages' estas carpetas/directorios no existian, 
+//? ahora ya existen ya que se generan al crear el componente.
+ng g c modules/home/pages/HomePage
+
+//! paths alias -> tsconfig.json
+//TODO: en el archivo tsconfig.json podemos crear alias para los path para que no nos aparezca ../../../ 
+//TODO: cuando importamos, a veces si el path es muy largo puede ser confuso o traer errores:
+"module": "ES2022",
+"paths": {
+    "@core/*": [
+        "src/app/core/*"
+    ],
+    "@modules/*": [
+        "src/app/modules/*"
+    ],
+    "@shared/*": [
+        "src/app/shared/*"
+    ]
+},
 
 
