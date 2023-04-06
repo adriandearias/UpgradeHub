@@ -6,25 +6,62 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
-  // public linksMenu: Array<any> = [
-  //   {
-  //     name: 'Home',
-  //     icon: 'uil-estate'
-  //   },
-  //   {
-  //     name: 'Buscar',
-  //     icon: 'uil-estate'
-  //   }
-  // ]
-
   mainMenu: {
-    defaultOptions: Array<any>;
-    accesLink: Array<any>;
+    defaultOptions: {name: string, icon: string, router: string[]}[];
+    accesLink: {name: string, icon: string}[];
   } = { defaultOptions: [], accesLink: [] };
-  
-  customOptions: Array<any> = [];
+
+  customOptions: { name: string, router: string[] }[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mainMenu.defaultOptions = [
+      {
+        name: 'Home',
+        icon: 'uil uil-estate',
+        router: ['/']
+      },
+      {
+        name: 'Buscar',
+        icon: 'uil uil-search',
+        router: ['/', 'history']
+      },
+      {
+        name: 'Tu biblioteca',
+        icon: 'uil uil-chart',
+        router: ['/', 'favorites']
+      }
+    ]
+
+    this.mainMenu.accesLink = [
+      {
+        name: 'Crear lista',
+        icon: 'uil-plus-square',
+      },
+      {
+        name: 'Canciones que te gustan',
+        icon: 'uil-heart-medical',
+      }
+    ]
+
+    this.customOptions = [
+      {
+        name: 'Mi lista º1',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º2',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º3',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º4',
+        router: ['/']
+      }
+    ]
+  }
 }
