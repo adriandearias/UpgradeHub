@@ -35,6 +35,7 @@ ng g m modules/Auth --routing
 ng g m modules/History --routing
 ng g m modules/Home --routing
 ng g m modules/Tracks --routing
+ng g m modules/Favorites --routing
 
 //TODO para crear el mudulo en shared o bien lo creamos a mano o utilizamos el siguiente comando para que no genere subcarpetas:
 //TODO en: src/app/
@@ -69,3 +70,9 @@ ng g c modules/home/pages/HomePage
 },
 
 
+//! Creamos componentes dentro de los modulos que hemos creado antes () -> modules/moduleName/pages/moduleNamePage
+ng g c modules/auth/pages/AuthPage
+ng g c modules/history/pages/HistoryPage
+ng g c modules/home/pages/HomePage <-- este lo hemos creado antes
+ng g c modules/tracks/pages/TracksPage
+ng g c modules/favorites/pages/FavoritesPage
