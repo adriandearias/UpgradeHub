@@ -3,7 +3,7 @@
         <i class="uil uil-ellipsis-h"></i>
     </div>
     <ul class="side-bar__list list-one">
-        <li [routerLink]="item.router" [queryParams]="{key1: 'value1'}" *ngFor="let item of mainMenu.defaultOptions">
+        <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions"> <!-- [queryParams]="{key1: 'value1'}" -->
             <i [ngClass]="['uil' ,item.icon]"></i>
             <span class="side-bar__list list-label">{{item.name}}</span>
         </li>
