@@ -1,0 +1,21 @@
+npx create-react-app projectname    <--- este quedará en desuso
+npm start
+
+---------------------------------------------------------------------
+npm create vite@latest              <--- este es el que utilizaremos para crear nuestro proyecto de react,
+                                    acto seguido al utilizarlo nos pedirá el nombre de proyecto que queremos darle.
+                                    Este instala muchas menos dependencias y podemos especificar con que lenguaje queremos trabajar
+                                    tras ponerle nombre a nuestro proyecto, en este caso <js></js>.
+
+npm i                               <--- para inicializar e instalar dependencias.
+
+npm run dev                         <--- abrir proyecto web, como en Angular.
+
+rafce                               <--- inicializar un componente atajo
+
+npm i sass                          <--- inicializar sass en nuestro proyecto.
+
+
+
+
+
