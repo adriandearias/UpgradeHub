@@ -1,4 +1,4 @@
-import { TrackService } from './../../../modules/tracks/services/track.service';
+//! import { TrackService } from './../../../modules/tracks/services/track.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -15,7 +15,7 @@ export class SideBarComponent implements OnInit {
 
   customOptions: { name: string, router: string[] }[] = [];
 
-  constructor(private router: Router, private trackService: TrackService) {
+  constructor(private router: Router) { //! private trackService: TrackService
     
   }
 
@@ -68,14 +68,14 @@ export class SideBarComponent implements OnInit {
       }
     ]
 
-    this.trackService.dataTracksRandom$
-    .subscribe((response: any) => {
-      this.customOptions.push(
-        {
-          name: response[0].name,
-          router: []
-        })
-    })
+    //! this.trackService.dataTracksRandom$
+    // .subscribe((response: any) => {
+    //   this.customOptions.push(
+    //     {
+    //       name: response[0].name,
+    //       router: []
+    //     })
+    // })
   }
   goTo($event: any): void{
     this.router.navigate(['/', 'favorites']
