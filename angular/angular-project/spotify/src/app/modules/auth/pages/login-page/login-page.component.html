@@ -9,6 +9,7 @@
         <div class="separator"></div>
         <form (ngSubmit)="sendLogin()" [formGroup]="formLogin" class="login-auth-form">
             <div class="form-group">
+                <label for="#" class="error">ENTORNO DE PRUEBA, entrar con: test@test.com - 12345678</label>
                 <label for="email">Dirección de correo o nombre de usuario</label>
                 <input formControlName="email" type="text" placeholder="Dirección de correo o nombre de usuario" class="form-input">
             </div>
@@ -19,7 +20,7 @@
             <div class="form-steps">
                 <a class="link" href="">¿Se te ha olvidado la contraseña?</a>
             </div>
-            <div> <!--*ngIf="errorSession" -->
+            <div *ngIf="errorSession" class="error" >
                 Ocurrio un error con tu email o password
             </div>
             <div class="form-action">
