@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import DigitalClock from './components/DigitalClock'
 import Countdown from './components/Countdown'
+import StopWatch from './components/StopWatch/StopWatch'
 
 function App() {
 
   return (
     <>
       <DigitalClock/>
-      <Countdown />
+      <Countdown/>
+      <StopWatch/>
     </>
   )
 }
