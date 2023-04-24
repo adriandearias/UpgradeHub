@@ -48,12 +48,24 @@ export const CV = {
           "Monitoring, maintenance and deployment of IT systems (Linux, Windows)",
       },
     ],
-    languages: {
-      language: "English",
-      wrlevel: "Hight",
-      splevel: "Conversation",
-    },
-    habilities: [
+    languages: [
+      {
+        language: "English",
+        wrlevel: "Hight",
+        splevel: "Conversation",
+      },
+      {
+        language: "Spanish",
+        wrlevel: "Native",
+        splevel: "Native",
+      },
+      {
+        language: "Catalan",
+        wrlevel: "Native",
+        splevel: "Native",
+      },
+    ],
+    skills: [
       "Javascript",
       "Node",
       "React",
