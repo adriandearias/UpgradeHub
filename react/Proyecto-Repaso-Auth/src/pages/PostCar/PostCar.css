@@ -1,0 +1,48 @@
+.post-car {
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.post-car > form {
+    height: 500px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: var(--terciary);
+}
+
+.post-car > form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-car > form input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.post-car > form button {
+    padding: 15px 25px;
+    background-color: var(--buttons);
+    color: var(--primary);
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.imagen {
+    height: 100px;
+    border-radius: 10px;
+}
